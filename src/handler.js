@@ -98,7 +98,7 @@ const getAllNotesHandler=(request, h)=>{
     return response;
   } else if (reading !== undefined) {
     // eslint-disable-next-line max-len
-    const readBooks = listbooks.filter((book) => book.reading === !!Number(reading));
+    const readBooks = listBooks.filter((book) => book.reading === !!Number(reading));
     const books=readBooks.map((book)=>({
       id: book.id,
       name: book.name,
@@ -114,7 +114,7 @@ const getAllNotesHandler=(request, h)=>{
     return response;
   } else if (finished !== undefined) {
     // eslint-disable-next-line max-len
-    const finishedBooks = listbooks.filter((book) => book.finished === !!Number(finished));
+    const finishedBooks = listBooks.filter((book) => book.finished === !!Number(finished));
     const books=finishedBooks.map((book)=>({
       id: book.id,
       name: book.name,
